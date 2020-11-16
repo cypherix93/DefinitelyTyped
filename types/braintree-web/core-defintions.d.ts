@@ -1,16 +1,11 @@
-/**
- * @description The current version of the SDK, i.e. `3.0.2`.
- */
-export const VERSION: string;
-
-export type callback<T = any> = (err?: BraintreeError, data?: T) => void;
+type callback<T = any> = (err?: BraintreeError, data?: T) => void;
 
 /**
  * Enum for {@link BraintreeError} types.
  */
-export type BraintreeErrorTypes = 'CUSTOMER' | 'MERCHANT' | 'NETWORK' | 'INTERNAL' | 'UNKNOWN';
+type BraintreeErrorTypes = 'CUSTOMER' | 'MERCHANT' | 'NETWORK' | 'INTERNAL' | 'UNKNOWN';
 
-export interface BraintreeError {
+interface BraintreeError {
     /**
      * @description A code that corresponds to specific errors.
      */

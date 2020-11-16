@@ -1,5 +1,4 @@
-import { callback } from './core';
-import { Client } from './client';
+import { Client } from '../client';
 
 // more info https://developer.apple.com/reference/applepayjs/1916082-applepay_js_data_types/paymentrequest
 

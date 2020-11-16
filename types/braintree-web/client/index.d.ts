@@ -1,5 +1,3 @@
-import { callback } from './core';
-
 /**
  * This object is returned by {@link Client#getConfiguration|getConfiguration}. This information is used extensively by other Braintree modules to properly configure themselves.
  */
@@ -95,5 +93,6 @@ export interface Client {
      *   });
      * });
      */
-    request(options: { method: string; endpoint: string; data: any; timeout?: number }, callback: callback): void;
+    request<TResponse = any>(options: { method: string; endpoint: string; data: any; timeout?: number }, callback: callback<TResponse>): void;
+    request<TResponse = any>(options: { method: string; endpoint: string; data: any; timeout?: number }): Promise<TResponse>;
 }
