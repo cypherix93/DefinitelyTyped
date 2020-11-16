@@ -27,6 +27,22 @@ export interface PayPalCheckoutTokenizationOptions {
     vault?: boolean;
 }
 
+export interface PayPalCheckoutPayPalSDKOptions {
+    'client-id'?: string;
+    'merchant-id'?: string;
+    currency?: string;
+    intent?: 'capture' | 'authorize';
+    commit?: boolean;
+    vault?: boolean;
+    components?: string;
+    'disable-funding'?: string;
+    'disable-card'?: string;
+    'integration-date'?: string;
+    debug?: boolean;
+    'buyer-country'?: string;
+    locale?: string;
+}
+
 export interface PayPalCheckout {
     /**
      * @description There are two ways to integrate the PayPal Checkout component.
@@ -209,6 +225,30 @@ export interface PayPalCheckout {
      */
     getClientId(): Promise<string>;
     getClientId(callback: (id: string) => void): void;
+
+    /**
+     * Resolves when the PayPal SDK has been succesfully loaded onto the page.
+     * @example <caption>Without options</caption>
+     * paypalCheckoutInstance.loadPayPalSDK().then(function () {
+     *   // window.paypal.Buttons is now available to use
+     * });
+     * @example <caption>With options</caption>
+     * paypalCheckoutInstance.loadPayPalSDK({
+     *   'client-id': 'PayPal Client Id', // Can speed up rendering time to hardcode this value
+     *
+     *   intent: 'capture', // Make sure this value matches the value in createPayment
+     *   currency: 'USD', // Make sure this value matches the value in createPayment
+     * }).then(function () {
+     *   // window.paypal.Buttons is now available to use
+     * });
+     * @example <caption>With Vaulting</caption>
+     * paypalCheckoutInstance.loadPayPalSDK({
+     *   vault: true
+     * }).then(function () {
+     *   // window.paypal.Buttons is now available to use
+     * });
+     */
+    loadPayPalSDK(options?: PayPalCheckoutPayPalSDKOptions, callback?: callback): Promise<void> | void;
 
     /**
      * Initializes the PayPal checkout flow with a payment method nonce that represents a vaulted PayPal account.
