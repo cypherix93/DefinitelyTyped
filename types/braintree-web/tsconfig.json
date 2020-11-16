@@ -19,6 +19,7 @@
     },
     "files": [
         "index.d.ts",
+        "core-defintions.d.ts",
         "test/web.ts",
         "test/node.ts"
     ]

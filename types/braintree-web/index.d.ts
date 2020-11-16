@@ -5,19 +5,18 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 3.1
 
-import { VERSION, BraintreeError, callback } from './modules/core';
-import { AmericanExpress } from './modules/american-express';
-import { ApplePay, ApplePaySession, ApplePayStatusCodes, ApplePayPayload } from './modules/apple-pay';
-import { Client, CreditCardInfo } from './modules/client';
-import { DataCollector } from './modules/data-collector';
-import { GooglePayment, GooglePaymentTokenizePayload } from './modules/google-payment';
-import { HostedFields, HostedFieldFieldOptions, HostedFieldsTokenizePayload, HostedFieldsStateObject } from './modules/hosted-fields';
-import { PayPal, PayPalTokenizePayload } from './modules/paypal';
-import { PayPalCheckout, PayPalCheckoutCreatePaymentOptions } from './modules/paypal-checkout';
-import { ThreeDSecure, ThreeDSecureVerifyPayload } from './modules/three-d-secure';
-import { UnionPay, UnionPayFetchCapabilitiesPayload, UnionPayEnrollPayload, UnionPayTokenizePayload } from './modules/unionpay';
-import { USBankAccount } from './modules/us-bank-account';
-import { Venmo, VenmoTokenizePayload } from './modules/venmo';
+import { AmericanExpress } from './american-express';
+import { ApplePay, ApplePaySession, ApplePayStatusCodes, ApplePayPayload } from './apple-pay';
+import { Client, CreditCardInfo } from './client';
+import { DataCollector } from './data-collector';
+import { GooglePayment, GooglePaymentTokenizePayload } from './google-payment';
+import { HostedFields, HostedFieldFieldOptions, HostedFieldsTokenizePayload, HostedFieldsStateObject } from './hosted-fields';
+import { PayPal, PayPalTokenizePayload } from './paypal';
+import { PayPalCheckout, PayPalCheckoutCreatePaymentOptions } from './paypal-checkout';
+import { ThreeDSecure, ThreeDSecureVerifyPayload } from './three-d-secure';
+import { UnionPay, UnionPayFetchCapabilitiesPayload, UnionPayEnrollPayload, UnionPayTokenizePayload } from './unionpay';
+import { USBankAccount } from './us-bank-account';
+import { Venmo, VenmoTokenizePayload } from './venmo';
 
 export const americanExpress: AmericanExpress;
 export const applePay: ApplePay;
@@ -32,20 +31,24 @@ export const unionpay: UnionPay;
 export const usBankAccount: USBankAccount;
 export const venmo: Venmo;
 
+/**
+ * @description The current version of the SDK, i.e. `3.67.0`.
+ */
+export const VERSION: string;
+
 export {
-  VERSION, BraintreeError, callback,
-  AmericanExpress,
-  ApplePay, ApplePaySession, ApplePayStatusCodes, ApplePayPayload,
-  Client, CreditCardInfo,
-  DataCollector,
-  GooglePayment, GooglePaymentTokenizePayload,
-  HostedFields, HostedFieldFieldOptions, HostedFieldsTokenizePayload, HostedFieldsStateObject,
-  PayPal, PayPalTokenizePayload,
-  PayPalCheckout, PayPalCheckoutCreatePaymentOptions,
-  ThreeDSecure, ThreeDSecureVerifyPayload,
-  UnionPay, UnionPayFetchCapabilitiesPayload, UnionPayEnrollPayload, UnionPayTokenizePayload,
-  USBankAccount,
-  Venmo, VenmoTokenizePayload
+    AmericanExpress,
+    ApplePay, ApplePaySession, ApplePayStatusCodes, ApplePayPayload,
+    Client, CreditCardInfo,
+    DataCollector,
+    GooglePayment, GooglePaymentTokenizePayload,
+    HostedFields, HostedFieldFieldOptions, HostedFieldsTokenizePayload, HostedFieldsStateObject,
+    PayPal, PayPalTokenizePayload,
+    PayPalCheckout, PayPalCheckoutCreatePaymentOptions,
+    ThreeDSecure, ThreeDSecureVerifyPayload,
+    UnionPay, UnionPayFetchCapabilitiesPayload, UnionPayEnrollPayload, UnionPayTokenizePayload,
+    USBankAccount,
+    Venmo, VenmoTokenizePayload,
 };
 
 export as namespace braintree;
