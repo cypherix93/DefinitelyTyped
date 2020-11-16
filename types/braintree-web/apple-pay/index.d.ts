@@ -123,6 +123,18 @@ export interface ApplePay {
     VERSION: string;
 
     /**
+     * @description A special merchant ID which represents the merchant association with Braintree. Required when using `ApplePaySession.canMakePaymentsWithActiveCard`.
+     * @example
+     * var promise = ApplePaySession.canMakePaymentsWithActiveCard(applePayInstance.merchantIdentifier);
+     * promise.then(function (canMakePaymentsWithActiveCard) {
+     *   if (canMakePaymentsWithActiveCard) {
+     *     // Set up Apple Pay buttons
+     *   }
+     * });
+     */
+    merchantIdentifier: string;
+
+    /**
      * Merges a payment request with Braintree defaults
      * The following properties are assigned to `paymentRequest` if not already defined
      * - countryCode
@@ -180,6 +192,10 @@ export interface ApplePay {
         callback: callback,
     ): void;
 
+    performValidation(
+        options: { validationURL: string; displayName?: string; merchantIdentifier?: string }
+    ): Promise<any>;
+
     /**
      * Tokenizes an Apple Pay payment.     * @example
      * var applePay = require('braintree-web/apple-pay');
@@ -203,4 +219,5 @@ export interface ApplePay {
      * });
      */
     tokenize(options: { token: any }, callback: callback): void;
+    tokenize(options: { token: any }): Promise<any>;
 }
