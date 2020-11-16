@@ -1,4 +1,4 @@
-// Type definitions for Braintree-web 3.62
+// Type definitions for Braintree-web 3.67
 // Project: https://github.com/braintree/braintree-web
 // Definitions by: Guy Shahine <https://github.com/chlela>
 //                 Jason Buckner <https://github.com/jbuckner>
@@ -6,17 +6,18 @@
 // TypeScript Version: 3.1
 
 import { AmericanExpress } from './american-express';
-import { ApplePay, ApplePaySession, ApplePayStatusCodes, ApplePayPayload } from './apple-pay';
-import { Client, CreditCardInfo } from './client';
+import { ApplePay } from './apple-pay';
+import { Client } from './client';
 import { DataCollector } from './data-collector';
-import { GooglePayment, GooglePaymentTokenizePayload } from './google-payment';
-import { HostedFields, HostedFieldFieldOptions, HostedFieldsTokenizePayload, HostedFieldsStateObject } from './hosted-fields';
-import { PayPal, PayPalTokenizePayload } from './paypal';
-import { PayPalCheckout, PayPalCheckoutCreatePaymentOptions } from './paypal-checkout';
-import { ThreeDSecure, ThreeDSecureVerifyPayload } from './three-d-secure';
-import { UnionPay, UnionPayFetchCapabilitiesPayload, UnionPayEnrollPayload, UnionPayTokenizePayload } from './unionpay';
+import { GooglePayment } from './google-payment';
+import { HostedFields } from './hosted-fields';
+import { PayPal } from './paypal';
+import { PayPalCheckout } from './paypal-checkout';
+import { ThreeDSecure } from './three-d-secure';
+import { UnionPay } from './unionpay';
 import { USBankAccount } from './us-bank-account';
-import { Venmo, VenmoTokenizePayload } from './venmo';
+import { Venmo } from './venmo';
+import { VisaCheckout } from './visa-checkout';
 
 export const americanExpress: AmericanExpress;
 export const applePay: ApplePay;
@@ -30,28 +31,30 @@ export const threeDSecure: ThreeDSecure;
 export const unionpay: UnionPay;
 export const usBankAccount: USBankAccount;
 export const venmo: Venmo;
-
+export const visaCheckout: VisaCheckout;
 
 /**
  * @description The current version of the SDK, i.e. `3.67.0`.
  */
 export const VERSION: string;
 
+export * from './american-express';
+export * from './apple-pay';
+export * from './client';
+export * from './data-collector';
+export * from './google-payment';
+export * from './hosted-fields';
+export * from './paypal';
+export * from './paypal-checkout';
+export * from './three-d-secure';
+export * from './unionpay';
+export * from './us-bank-account';
+export * from './venmo';
+export * from './visa-checkout';
+
 type BraintreeErrorExport = BraintreeError;
 
 export {
-    AmericanExpress,
-    ApplePay, ApplePaySession, ApplePayStatusCodes, ApplePayPayload,
-    Client, CreditCardInfo,
-    DataCollector,
-    GooglePayment, GooglePaymentTokenizePayload,
-    HostedFields, HostedFieldFieldOptions, HostedFieldsTokenizePayload, HostedFieldsStateObject,
-    PayPal, PayPalTokenizePayload,
-    PayPalCheckout, PayPalCheckoutCreatePaymentOptions,
-    ThreeDSecure, ThreeDSecureVerifyPayload,
-    UnionPay, UnionPayFetchCapabilitiesPayload, UnionPayEnrollPayload, UnionPayTokenizePayload,
-    USBankAccount,
-    Venmo, VenmoTokenizePayload,
     BraintreeErrorExport as BraintreeError,
 };
 
