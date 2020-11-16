@@ -31,10 +31,13 @@ export const unionpay: UnionPay;
 export const usBankAccount: USBankAccount;
 export const venmo: Venmo;
 
+
 /**
  * @description The current version of the SDK, i.e. `3.67.0`.
  */
 export const VERSION: string;
+
+type BraintreeErrorExport = BraintreeError;
 
 export {
     AmericanExpress,
@@ -49,6 +52,7 @@ export {
     UnionPay, UnionPayFetchCapabilitiesPayload, UnionPayEnrollPayload, UnionPayTokenizePayload,
     USBankAccount,
     Venmo, VenmoTokenizePayload,
+    BraintreeErrorExport as BraintreeError,
 };
 
 export as namespace braintree;
