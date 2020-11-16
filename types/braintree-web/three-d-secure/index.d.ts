@@ -1,5 +1,4 @@
-import { callback, BraintreeError } from './core';
-import { Client } from './client';
+import { Client } from '../client';
 
 export interface ThreeDSecureAccountDetails {
     cardType: string;

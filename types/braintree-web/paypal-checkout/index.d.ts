@@ -1,7 +1,6 @@
 /// <reference types="paypal-checkout-components" />
 
-import { callback } from './core';
-import { Client } from './client';
+import { Client } from '../client';
 
 export interface PayPalCheckoutCreatePaymentOptions {
     flow: paypal.FlowType;

@@ -1,6 +1,5 @@
-import { callback } from './core';
-import { Client } from './client';
-import { HostedFields } from './hosted-fields';
+import { Client } from '../client';
+import { HostedFields } from '../hosted-fields';
 
 export interface UnionPayAccountDetails {
     cardType: string;

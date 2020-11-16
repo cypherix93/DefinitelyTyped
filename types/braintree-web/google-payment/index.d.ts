@@ -1,7 +1,6 @@
 /// <reference types="googlepay" />
 
-import { callback } from './core';
-import { Client } from './client';
+import { Client } from '../client';
 
 export type GooglePaymentTokenizeValues = 'Yes' | 'No' | 'Unknown';
 

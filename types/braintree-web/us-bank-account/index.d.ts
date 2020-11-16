@@ -1,5 +1,4 @@
-import { callback } from './core';
-import { Client } from './client';
+import { Client } from '../client';
 
 export interface USBankAccount {
     create: (options: { client: Client }, callback: callback) => void;
