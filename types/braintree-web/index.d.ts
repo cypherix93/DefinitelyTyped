@@ -5,6 +5,8 @@
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 3.1
 
+import './core-defintions';
+
 import { AmericanExpress } from './american-express';
 import { ApplePay } from './apple-pay';
 import { Client } from './client';
