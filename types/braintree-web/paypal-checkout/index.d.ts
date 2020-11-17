@@ -183,7 +183,7 @@ export interface PayPalCheckout {
      * ```
      *
      */
-    createPayment(options: PayPalCheckoutCreatePaymentOptions, callback?: callback): Promise<string>;
+    createPayment(options: PayPalCheckoutCreatePaymentOptions): Promise<string>;
 
     /**
      * Tokenizes the authorize data from PayPal's checkout.js library when completing a buyer approval flow.
